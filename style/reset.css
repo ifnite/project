@@ -1,0 +1,16 @@
+/*DuYiqi 2015-7-25 22:34*/
+/*此文件用于初始化整个网站的字体样式、大小、链接等的初始样式等等*/
+/*设置所有元素的内外边距均为0，a链接无特殊样式，li元素无特殊样式*/
+*{
+	padding:0px;
+	margin:0px;
+	text-decoration: none;
+}
+a,a:hover{
+	text-decoration: none;
+	font-style: normal;
+	color: normal;
+}
+li{
+	list-style: normal;
+}
