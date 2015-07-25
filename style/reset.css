@@ -5,11 +5,12 @@
 	padding:0px;
 	margin:0px;
 	text-decoration: none;
+	border: none
 }
 a,a:hover{
 	text-decoration: none;
 	font-style: normal;
-	color: normal;
+	color: inherit;
 }
 li{
 	list-style: normal;

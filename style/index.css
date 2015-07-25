@@ -3,4 +3,34 @@
 /*#header=>盛放顶部 #container=>放置主要内容 #footer=>放置底部*/
 /*顶部：#topBar放置logo 旧版入口及搜索 #nav放置导航栏
   主要内容：mainNews放置学工新闻 otherNews放置学院新闻 sideBar中的notice放置公告 links放置链接 wechat放置微专题*/
- 
+ body{
+ 	background: #fff;
+ 	margin: 0px;
+
+ }
+
+ #header{
+ 	width:100%;
+ 	height: 660px;
+ 	background: url(../image/background.jpg);
+ 	background-position:100% 0% ;
+ 	overflow: hidden;
+ }
+ #topBar{
+ /*	background:red;*/
+ 	height:50px;
+ 	margin-top:1%; 
+ }
+ #topBar iframe{
+ 	display: inline-block;
+ 	width: 408px;
+ 	height:50px;
+ 	margin-left:6.25%; 
+ }
+ #topBar ul {
+ 	display: inline-block;
+ }
+ #topBar ul li{
+ 	display: inline;
+ 	color: #fff;
+ }
