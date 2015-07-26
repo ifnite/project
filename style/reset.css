@@ -5,7 +5,8 @@
 	padding:0px;
 	margin:0px;
 	text-decoration: none;
-	border: none
+	border: none;
+	font-family: Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 a,a:hover{
 	text-decoration: none;

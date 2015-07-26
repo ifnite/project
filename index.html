@@ -9,11 +9,12 @@
 <body>
 	<div id="header">
 		<div id="topBar">
-			<iframe src="image/logo.svg"></iframe>
+			<!--[if !IE]><!--> <iframe src="image/logo.svg"></iframe> <!--<![endif]-->
 			<ul>
 				<li><a href="#">旧版入口</a></li>
 				<li><a href="#">我要投稿</a></li>
-				<li><input type="text"></li>
+				<li><div id="search"><input id="search_box" type="text" value="搜索...">
+				<input id="search_botton" type="submit" value=""></div></li>
 			</ul>
 		</div>
 		<div id="nav"></div>
