@@ -6,17 +6,20 @@
  body{
  	background: #fff;
  	margin: 0px;
+ 	margin: 0 auto;
+ 	background: url(../image/background.jpg) repeat-x;
+ 	background-position:center ;
  }
 
  #header{
  	width:100%;
  	height: 660px;
- 	background: url(../image/background.jpg);
- 	background-position:center ;
+	/*background: red;*/
  	overflow: hidden;
+ 	margin: 0 auto
  }
+ /*logo栏样式*/
  #topBar{
-/* 	background:red;*/
  	height:50px;
  	margin-top:1%; 
  }
@@ -26,12 +29,9 @@
  	width: 408px;
  	height:50px;
  	margin-left:6.25%; 
-/* 	background: green;*/
 	float: left;
  }
  #topBar ul {
- 	/*height: 100%;*/
-/* 	background: green;*/
  	float: right;
  	margin-right:6.25%; 
  	margin-top: 20px;
@@ -42,7 +42,6 @@
  	margin-left:30px;
  	color: #fff;
  	font-size: 14px;
-/* 	background: green;*/
  }
  #topBar #search{
  	width: 160px;
@@ -51,7 +50,6 @@
  	margin-bottom: -8px;
  	border: none;
  	background: url(../image/search_box.png) no-repeat;
- 	/*background-size: cover;*/
  	background-position: center;
  	position: relative;
  }
@@ -59,14 +57,15 @@
  	position: absolute;
 	left: 14px;
 	top:8px;
- 	width: 100px;
+ 	width: 110px;
  	background:none;
  	font-size: 12px;
  	color:#c7c7c7;}
 
  #search #search_botton{
  	display: inline-block;
- 	 _zoom:1;_display:inline;
+ 	 _zoom:1;
+ 	 _display:inline;
  	width: 20px;
 
  	position: absolute;
@@ -75,5 +74,28 @@
  	height: 100%;
  	background: url(../image/search.png) no-repeat;
  	background-position: center;
-
  }
+/*logo样式*/
+/*导航样式*/
+#nav{
+	height: 30px;
+	overflow: hidden;
+	margin-top: 20px;
+}
+#nav ul{
+	margin-left: 6.25%;
+}
+#nav ul li{
+	width: auto;
+	height: 25px;
+	display: block;
+	float: left;
+	text-align: center;
+	margin-right: 30px;
+	font-size: 16px;
+	color: #fff;
+}
+#nav ul li:hover,
+#nav ul .active{
+	border-bottom: 2px solid #fff;
+}

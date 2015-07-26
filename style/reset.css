@@ -11,8 +11,9 @@
 a,a:hover{
 	text-decoration: none;
 	font-style: normal;
-	color: inherit;
+	color: #fff;
 }
 li{
-	list-style: normal;
+	list-style: none;
+
 }
