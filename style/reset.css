@@ -6,12 +6,13 @@
 	margin:0px;
 	text-decoration: none;
 	border: none;
-	font-family: Arial, "Microsoft YaHei", "微软雅黑", sans-serif;
+	font-family:  "Microsoft YaHei", "微软雅黑", Arial,sans-serif,"Microsoft YaHei UI";
 }
 a,a:hover{
 	text-decoration: none;
 	font-style: normal;
 	color: #fff;
+	font-size: inherit;
 }
 li{
 	list-style: none;
