@@ -1,17 +1,6 @@
 /*DuYiqi 2015-7-25 22:34*/
 /*此文件用于设置主页中间的css样式*/
-#showPic{
-	width: 92%;
-	margin: 0 auto;
-	margin-top:-540px; 
-	height: 580px;
-	background: #fff;
-	-webkit-box-shadow:0 0 15px rgba(0, 0, 0, .5);  
-  	-moz-box-shadow:0 0 15px rgba(0, 0, 0, .5);   
-  	box-shadow:0 0 15px rgba(0, 0, 0, .5);  
-}
-
-#showPic #picbox{
+#container_top #picbox{
 	width: 100%;
 	height: 440px;
 	overflow: hidden;

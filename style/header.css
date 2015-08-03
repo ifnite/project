@@ -109,3 +109,37 @@
 #nav ul .active{
 	border-bottom: 2px solid #fff;
 }
+#container{
+	width: 92.1%;
+	margin: 0 auto;
+	margin-top:-180px; 
+/*	height: 1100px;*/
+	
+/*	background-color: red;*/
+	overflow: hidden;
+}
+#container_top{
+	width: 92%;
+	margin: 0 auto;
+	margin-top:-540px; 
+	height: 580px;
+	background: #fff;
+	-webkit-box-shadow:0 0 15px rgba(0, 0, 0, .5);  
+  	-moz-box-shadow:0 0 15px rgba(0, 0, 0, .5);   
+  	box-shadow:0 0 15px rgba(0, 0, 0, .5);  
+  	position: relative;
+  	/*background: red;*/
+}
+
+#headerFitter{
+	display: block;
+	width: 100%;
+	height: 180px;
+	
+	position: absolute;
+	bottom: -20px;
+	left: 0px;
+	background: url(../image/fitter.png) repeat-x;
+/*	background: red;*/
+	z-index:-555 
+}

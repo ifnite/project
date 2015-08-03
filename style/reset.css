@@ -18,3 +18,25 @@ li{
 	list-style: none;
 
 }
+.title{
+/*	background:red;*/
+	overflow: hidden;
+	height: 60px;
+	width: 290px;
+	position: relative;
+	margin: 0 auto;
+	border-bottom: 1px solid #a7a7a7;
+	background-color: #fff;
+}
+.title h3{
+	display: block;
+	width: 100px;
+	height: 24px;
+	text-indent: center;
+/*	background: red;*/
+	font-size: 24px;
+	font-weight: lighter;
+	color: #2c2c2c;
+	margin-top: 24px;
+	margin-left:2px;
+}
