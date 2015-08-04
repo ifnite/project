@@ -9,6 +9,7 @@ var hotNews=$("#hotNews >ul").children('li');
 fixPositon(lists,"h1","p");
 fixPositon(hotNews,"p");
 fixHeight(hotNews); 
+
 /*用于修复因绝对定位引起的无图片标题的位置问题*/
 function fixPositon(elem,tag1,tag2,tag3){
 	 $.each(elem,function(){

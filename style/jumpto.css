@@ -1,0 +1,79 @@
+.jumpto-cotainer {
+  position: relative;
+}
+.jumpto-subnav {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 220px;
+/*  background: #e9e9e9;*/
+}
+
+.jumpto-subnav .jumpto-second {
+  display: none;
+}
+
+.jumpto-subnav.fixed {
+  position: fixed !important;
+  left: 60px;
+  top: 0px;
+  margin-left: 0px;
+}
+
+.jumpto-subnav.fixed.bottom {
+  /*top: auto;
+  bottom: 0;
+  position: absolute !important;
+  left: 0px;*/
+}
+
+.jumpto-subnav ul{
+  background: #e9e9e9;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jumpto-subnav ul li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jumpto-subnav ul li a {
+  padding: 10px;
+  padding-left:30px;
+  padding-top: 6px;
+ display: block;
+ box-sizing: border-box; 
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+ color: #2f2f2f;
+ font-size: 16px;
+
+}
+
+.jumpto-subnav ul li a:hover, .jumpto-subnav ul li a.active {
+  background-color: #fff;
+  background: url(../image/hover.png) no-repeat;
+  background-size: cover;
+}
+.jumpto-subnav ul > li > ul > li{
+  width: 92%;
+  margin-left: 20px;
+}
+.jumpto-subnav ul > li > ul > li > a{
+  font-size: 12px;
+  padding-left: 24px;
+}
+
+.jumpto-title, .jumpto-close a{
+  background: #7D0A2C;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 10px;
+  display: block;
+}

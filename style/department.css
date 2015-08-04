@@ -1,0 +1,46 @@
+#partTitle p{
+	width: 200px;
+}
+#container_top{
+	z-index: 10;
+	/*position: relative;*/
+}
+#container{
+	margin-top: -380px;
+	overflow: visible;
+	position: relative;
+	height: auto;
+	z-index: 1000；
+}
+.page_container{
+	background: #fff;
+	display: block;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top:-20px;
+	left: 0;
+    z-index: 10000;
+    padding-top: 26px;
+    padding-bottom: 80px;
+}
+.jumpto-block{
+	margin-left: 250px;
+}
+.jumpto-block h2{
+	display: block;
+	/*background: red;*/
+	text-align: center;
+	font-weight: normal;
+	color: #1573b0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 24px;
+}
+.jumpto-block h3{
+	color: #1573b0;
+	font-weight: lighter;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+}
