@@ -216,6 +216,8 @@
 #newsRecommand ul li{
 	position: relative;
 	margin-bottom: 12px;
+	margin-top: 12px;
+/*	background: red;*/
 }
 #newsRecommand ul li img{
 	display: block;
