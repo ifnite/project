@@ -7,12 +7,14 @@
  	background: #fff;
  	margin: 0px;
  	margin: 0 auto;
+ 	width: 100%;
+ 	background: red;
  	background: url(../image/background.jpg) repeat-x;
  	
  }
  #main{
  	width: 1280px;
- 	margin: 0 auto
+ 	margin: 0 auto;
  }
 
  #header{

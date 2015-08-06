@@ -1,12 +1,14 @@
 .jumpto-cotainer {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .jumpto-subnav {
   position: absolute;
   top: 0;
   left: 0px;
   width: 220px;
-/*  background: #e9e9e9;*/
+  background: green;
 }
 
 .jumpto-subnav .jumpto-second {
