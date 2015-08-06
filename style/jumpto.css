@@ -10,22 +10,18 @@
 }
 
 .jumpto-subnav .jumpto-second {
-  display: none;
+  display: b;
 }
 
-.jumpto-subnav.fixed {
+/*.jumpto-subnav.fixed {
   position: fixed !important;
-  left: 60px;
   top: 0px;
-  margin-left: 0px;
-}
+  left: 20px;
+}*/
 
-.jumpto-subnav.fixed.bottom {
-  /*top: auto;
-  bottom: 0;
-  position: absolute !important;
-  left: 0px;*/
-}
+/*.jumpto-subnav.fixed.bottom {
+  display: none;
+}*/
 
 .jumpto-subnav ul{
   background: #e9e9e9;
@@ -75,5 +71,5 @@
   font-size: 12px;
   font-weight: 500;
   padding: 5px 10px;
-  display: block;
+  display: none;
 }

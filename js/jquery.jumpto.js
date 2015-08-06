@@ -57,20 +57,40 @@
             $("a[href='#"+$(this).attr("id")+"']").closest(".jumpto-second").show()
           }
           if($("a[href='#"+$(this).attr("id")+"']").parent().parent().hasClass("jumpto-first")) {
-            $("a[href='#"+$(this).attr("id")+"']").closest(".jumpto-first").find(".jumpto-second").hide()
+            $("a[href='#"+$(this).attr("id")+"']").closest(".jumpto-first").find(".jumpto-second").show()
           }
           if($("a[href='#"+$(this).attr("id")+"']").parent().find(".jumpto-second")) {
             $("a[href='#"+$(this).attr("id")+"']").parent().find(".jumpto-second").show()
           }
         }
       });
+      
       if($(document).scrollTop() > settings.offset) {
         $(".jumpto-subnav").removeClass("bottom").addClass("fixed");
+        $(".jumpto-subnav.fixed").css({
+          "position":"fixed",
+          "top":"0px",
+      });
+         $(".jumpto-subnav.fixed").css("left",function(){return nowLeft})
       } else {
-        $(".jumpto-subnav").removeClass("bottom fixed");
+       
+        $(".jumpto-subnav.fixed").removeClass("bottom fixed");
+        $(".jumpto-subnav").css({
+          "position":"absolute",
+          "top":"0px",
+          "left":"0px"
+      });
+       
       }
-      if($(document).scrollTop() > el.outerHeight(true)) {
+      if($(document).scrollTop() >($(document).height()-$(window).height()-1000)) {
         $(".jumpto-subnav").addClass("bottom fixed");
+        var test=$(".jumpto-subnav").attr("class");
+        // alert(test);
+        $(".jumpto-subnav.bottom.fixed").css({
+          "position":"fixed",
+        });
+        $(".jumpto-subnav.bottom.fixed").css("left",function(){return nowLeft});
+        $(".jumpto-subnav.bottom.fixed").css("top","-300px")
       }
     }
     
@@ -129,7 +149,7 @@
         }
       }
     });
-    
+    var nowLeft=$(".jumpto-subnav").offset().left;
     $(window).scroll(function() {
       redrawMenu()
     });
@@ -153,7 +173,7 @@
       });
       if($.inArray(true, track) == -1) {
         $(".jumpto-subnav a").removeClass("active")
-        $(".jumpto-subnav .jumpto-second").hide()
+        $(".jumpto-subnav .jumpto-second").show()
       }
     }, 500);
   }
