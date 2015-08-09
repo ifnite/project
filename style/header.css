@@ -1,21 +1,8 @@
 /*DuYiqi 2015-7-25 22:34*/
 /*此文件用于设置主页顶部的css样式*/
 /*#header=>盛放顶部 #container=>放置主要内容 #footer=>放置底部*/
-/*顶部：#topBar放置logo 旧版入口及搜索 #nav放置导航栏
-  主要内容：mainNews放置学工新闻 otherNews放置学院新闻 sideBar中的notice放置公告 links放置链接 wechat放置微专题*/
- body{
- 	background: #fff;
- 	margin: 0px;
- 	margin: 0 auto;
- 	width: 100%;
- 	background: red;
- 	background: url(../image/background.jpg) repeat-x;
- 	
- }
- #main{
- 	width: 1280px;
- 	margin: 0 auto;
- }
+/*顶部：#topBar放置logo 旧版入口及搜索 #nav放置导航栏*/
+
 
  #header{
  	width:100%;

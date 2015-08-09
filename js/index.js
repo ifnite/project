@@ -1,6 +1,9 @@
-$(document).ready(function() {
+	//公告板切换
 	noticeBored();
+	//图片轮播
 	pictureChange();
+
+	// 跑马灯
 	 $(".example").smartmarquee({
 		  // animate duration
 		  duration: 1000,   
@@ -11,7 +14,7 @@ $(document).ready(function() {
 		  // 'vertical' or 'horizontal'
 		  axis : "vertical"
 		  });
-});
+
 
 /*公告栏点击切换显示*/
 function noticeBored(){

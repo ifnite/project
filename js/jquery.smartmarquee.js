@@ -8,7 +8,6 @@
  * @author Samet TEMIZER
  * @version 1.0
  */
-
 $.fn.smartmarquee = function(vars) {
 	var defaults = {
 	    duration: 1000,      // animate duration

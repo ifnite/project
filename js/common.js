@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	searchBox();//实现搜索框输入和输出的各项功能；
 	backToTop();//实现回到顶部按钮；
+	// logoIn();
 	
 });
 
@@ -63,11 +64,16 @@ function backToTop () {
 		btn.mousedown(function() {
 			$(this).find("a").css('background', '#1573b1');
 		});
+
 		aBtn.click(function(event) {
 			event.preventDefault();
 			goBack();
 			
 		});
+		abtn.on("tap",function () {
+			event.preventDefault();
+			goBack();
+		})
 		function goBack(){
 			var timer=setInterval(GoBack,5);
 			function GoBack () {
