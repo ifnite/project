@@ -10,10 +10,23 @@
 	position: absolute;
 	left: 0px;
 	right: 0px;
-	width: 100%;
-	height: 100%;
+	width: 1280px;
+	height: 480px;
+	opacity: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); /* IE6/IE7/8 */
+	transition: all 2s;
+	-moz-transition: all 2s;	/* Firefox 4 */
+	-webkit-transition: all 2s;	/* Safari 和 Chrome */
+	-o-transition: all 2s;	
 }
-
+#picbox .picOn{
+	opacity: 1;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100); /* IE6/IE7/8 */
+	transition: all 2s;
+	-moz-transition: all 2s;	/* Firefox 4 */
+	-webkit-transition: all 2s;	/* Safari 和 Chrome */
+	-o-transition: all 2s;	
+}
 #picbox i{
 	display: block;
 /*	background: red;*/
@@ -127,6 +140,7 @@
 	margin: 0 auto;
 	margin-top: 12px;
 	overflow: hidden;
+/*	float：left；*/
 }
 .info .info_data{
 	font-size: 24px;

@@ -1,0 +1,12 @@
+.smartmarquee {
+	position: relative;
+/*	background: red;*/
+	width: 90%;
+	height: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.smartmarquee .container {
+	position: absolute;
+	left: 16px;
+}

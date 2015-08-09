@@ -1,7 +1,19 @@
 $(document).ready(function() {
 	noticeBored();
-	// pictureChange();
+	pictureChange();
+	 $(".example").smartmarquee({
+		  // animate duration
+		  duration: 1000,   
+		  // auto loop
+		  loop : true,      
+		  // interval duration
+		  interval : 2000, 
+		  // 'vertical' or 'horizontal'
+		  axis : "vertical"
+		  });
 });
+
+/*公告栏点击切换显示*/
 function noticeBored(){
 	var notices=$(".info>info_content>ul").children('li');
 	var choose=$("#notices>.title").children('ul').find('li');
@@ -69,4 +81,66 @@ function noticeBored(){
 			}
 		});
 	}
+}
+/*图片轮播*/
+function pictureChange() {
+	var pictures=$('#picbox').children('img');
+	var dot=$('#picbox>ul').children('li');
+	var nextBtn=$('#right');
+	var preBtn=$('#left');
+		preBtn.click(picPre);
+		nextBtn.click(picNext);
+		autoPlay();
+	$('#picbox').on("swiperight",function(){
+  		picNext();
+	});
+	$('#picbox').on("swipeleft",function(){
+  		picPre();
+	});
+	function autoPlay(){
+		var timer=setInterval(picNext,3000);
+		pictures.parent().hover(function() {
+			clearInterval(timer);
+		}, function() {
+			timer=setInterval(picNext,5000);
+		});
+	}
+	function picNext () {
+		var index=$('.picOn').length;
+		var next=parseInt(index)+1;
+		dot.each(function() {
+			$(this).attr("class",'')
+		});
+		if(next!=6){
+			var nextPic=pictures[next-1];
+			$(nextPic).attr("class",'picOn');
+			$(dot[next-1]).attr("class",'on');
+		}
+		else{
+			pictures.each(function() {
+			 	$(this).attr("class",'');
+				$(pictures[0]).attr('class','picOn');
+			});
+			$(dot[0]).attr("class",'on');	
+		}
+	}
+	function picPre (){
+		var index=$('.picOn').length;
+		var next=parseInt(index)-1;
+		dot.each(function() {
+			$(this).attr("class",'')
+		});
+		if(next!=0){
+			var prePic=pictures[next];
+			$(prePic).attr("class",'');
+			$(dot[next-1]).attr("class",'on');
+		}
+		else{
+			pictures.each(function() {
+			 	$(this).attr("class",'picOn');
+			});
+			$(dot[4]).attr("class",'on');	
+		}
+	}
+
 }
