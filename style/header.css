@@ -17,14 +17,15 @@
  #topBar{
  	height:50px;
  	margin-top:1%; 
+ 	overflow: hidden;
  }
- #topBar iframe{
+ #topBar img{
  	display: inline-block;
  	_zoom:1;_display:inline;
  	width: 408px;
  	height:50px;
  	margin-left:6.25%; 
-	float: left;
+/*	float: left;*/
  }
  #topBar ul {
  	float: right;
@@ -117,6 +118,7 @@
   	-moz-box-shadow:0 0 15px rgba(0, 0, 0, .5);   
   	box-shadow:0 0 15px rgba(0, 0, 0, .5);  
   	position: relative;
+  	behavior: url(ie-css3.htc);
   	/*background: red;*/
 }
 

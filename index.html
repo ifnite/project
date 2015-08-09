@@ -9,7 +9,9 @@
 	<link rel="stylesheet" type="text/css" href="style/indexNews.css">
 	<link rel="stylesheet" type="text/css" href="style/indexWechat.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
-	<link rel="stylesheet" href="style/jquery.smartmarquee.css">
+	
+	<!--[if lt IE 9]><link rel="stylesheet" href="style/ie.css"><![endif]-->
+	<!--[if lt IE 8]><link rel="stylesheet" href="style/ie7.css"><![endif]-->	
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/jquery.mobile.custom.min.js"></script>
 	
@@ -18,7 +20,7 @@
 	<div id="main">
 	<header><div id="header">
 		<div id="topBar">
-			<!--[if !IE]><!--> <iframe src="image/logo.svg"></iframe> <!--<![endif]-->
+			<img src="image/logo.png"></img> 
 			<ul>
 				<li><a href="http://222.197.182.130/xgb2011/">旧版入口</a></li>
 				<li><a href="#">我要投稿</a></li>
@@ -160,8 +162,9 @@
 				
 					</ul>
 				</div>
-				
+				<!--[if lt IE 9]><div class="ieTop"></div><div class="ieBottom"></div><![endif]-->
 				<div class="more"><a href="noticeList.html">>更多</a></div>
+				
 			</div>
 			<div id="links">
 				<div class="title">
@@ -193,6 +196,7 @@
 						<p>校团委<br \><span>YLC</span></p>
 					</a></li>
 				</ul>
+				<!--[if lt IE 9]><div class="ieTop"></div><div class="ieBottom"></div><![endif]-->
 			</div>
 			<div id="weChat">
 				<div id="wechat_box">

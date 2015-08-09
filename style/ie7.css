@@ -1,0 +1,19 @@
+#notices{
+	top:60px;
+}
+#links{
+	margin-top: 80px;
+}
+#topBar ul{
+	position:absolute;
+	top:7px;
+	height: 30px;
+	right: 0px; 
+	overflow: hidden;
+/*	background: yellow*/
+}
+#topBar ul li{
+	float: left;
+	height: 30px;
+	line-height:30px;
+}

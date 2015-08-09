@@ -1,4 +1,3 @@
-
 $(".page_container").jumpto({
   				firstLevel: "> h2",
   				secondLevel: "h3 > p",
@@ -10,13 +9,20 @@ $(".page_container").jumpto({
   				showTitle: false,
   				closeButton: false
 });
+
 //用于实现组织架构图点击跳转的功能
 function departPicClick(){
 	var lists=$(".jumpto-first>li:eq(1)>ul");
 	var btn=$("#departPic>ul").children('li');
 	btn.each(function(){
 		$(this).click(function() {
-		event.preventDefault();
+			
+		if(document.all){ //判断IE浏览器
+ 				 window.event.returnValue = false;
+			}
+			else{
+  				event.preventDefault();
+			};
 		var thisId=$(this).attr("id").replace(/[^0-9]/ig, "");
 		var list=lists.find('li').eq(thisId).children('a');
 		// list.css('background', 'red');
@@ -66,8 +72,15 @@ function leaderPicClick(){
 			positonFix();
 			var cover=$('.cover');
 			cover.click(function() {
-				event.stopPropagation();
-				cover.remove();
+				// event.stopPropagation();
+				if(document.all){ //判断IE浏览器
+ 					cover.css('display', 'none');
+				}
+				else{
+  					cover.remove();
+				};
+				
+				
 			});
 
 		});
@@ -81,3 +94,4 @@ function positonFix(){
 }
 departPicClick();
 leaderPicClick();
+

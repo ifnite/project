@@ -22,7 +22,12 @@ function noticeBored(){
 	var choose=$("#notices>.title").children('ul').find('li');
 	choose.each(function() {
 		$(this).click(function(event) {
-			event.preventDefault();
+			if(document.all){ //判断IE浏览器
+ 				 window.event.returnValue = false;
+			}
+			else{
+  				event.preventDefault();
+			};
 			choose.each(function() {
 				$(this).attr("class","");
 				});

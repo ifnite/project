@@ -59,19 +59,30 @@ function backToTop () {
 		btn.hover(function() {
 			$(this).find("a").css('background', '#424242');
 		}, function() {
-			$(this).find("a").css('background', 'rgba(66,66,66,.6)');
+			if(document.all){$(this).find("a").css('background', '#666666');}
+			else{$(this).find("a").css('background', 'rgba(66,66,66,.6)');}
 		});
 		btn.mousedown(function() {
 			$(this).find("a").css('background', '#1573b1');
 		});
 
 		aBtn.click(function(event) {
-			event.preventDefault();
+			if(document.all){ //判断IE浏览器
+ 				 window.event.returnValue = false;
+			}
+			else{
+  				event.preventDefault();
+			};
 			goBack();
 			
 		});
-		abtn.on("tap",function () {
-			event.preventDefault();
+		aBtn.on("tap",function () {
+				if(document.all){ //判断IE浏览器
+ 				 window.event.returnValue = false;
+			}
+			else{
+  				event.preventDefault();
+			};
 			goBack();
 		})
 		function goBack(){

@@ -1,0 +1,60 @@
+#links{
+	display: block;
+	width:340px;
+	height: 230px;
+	margin-top: 20px;
+	margin-left: 16px；
+  	position: relative;
+ 	background: url(../image/cardforie.png) repeat-y center;
+}
+#notices{
+	background: url(../image/cardforie.png) repeat-y center;
+}
+.ieTop,.ieBottom{
+	display: block;
+	width: 335px;
+	height: 8px;
+	margin-top:0px;
+
+	
+}
+.more{
+	width: 96%;
+	right: 4px;
+/*		background: red;*/
+}
+.ieTop{
+	position: absolute;
+	top:-4px;
+	left: 3px;
+	z-index: 100000;
+	background: url(../image/cardtopforie.png) no-repeat;
+}
+.ieBottom{
+	position: absolute;
+	bottom:-3px;
+	left: 3px;
+	z-index: 100000;
+	background: url(../image/cardbotforie.png) no-repeat;
+}
+.backToTop a{
+	background: #666666;
+}
+
+#notices .title{
+	background: #fff;
+}
+#notices{
+
+  
+}
+
+#partTitle div{
+	display: block;
+	height:50px;
+	width: 220px;
+	background: #0e70b1;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
