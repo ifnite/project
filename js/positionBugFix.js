@@ -1,11 +1,7 @@
-/*用于修复翻页按钮的居中对齐问题*/
-var page=$("#pageChange >ul");
-var pageLiNumber=page.children().length;
-page.width(pageLiNumber*40);
-
 
 var lists=$(".list").children('li');
 var hotNews=$("#hotNews >ul").children('li');
+
 fixPositon(lists,"h1","p");
 fixPositon(hotNews,"p");
 fixHeight(hotNews); 
