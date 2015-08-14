@@ -30,6 +30,7 @@ body{
  }
 #main{
  	width: 1280px;
+ 	min-height:1000px; 
  	margin: 0 auto;
  }
 .title{

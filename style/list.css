@@ -9,6 +9,7 @@
 }
 #newsList{
 	height:auto;
+	min-height: 500px;
 	width: 840px;
 	position: absolute;
 	top:0px;
@@ -112,7 +113,7 @@
 	width: 60px;
 	position: absolute;
 	font-size: 10px;
-	left: 24px;
+	left: 20px;
 	top:2px;
 }
 #newsList .newsTime ul li a{
@@ -168,6 +169,12 @@
 	margin-top: 6px;
 	margin-left: 12px;
 /*	background: red;*/
+}
+#newsList #pageChange .next.disabled{
+	background: url(../image/pageIcon.png) no-repeat -24px;
+}
+#newsList #pageChange .pre.disabled{
+	background: url(../image/pageIcon.png) no-repeat -16px;
 }
 #newsList #pageChange ul .on {
 	background: #4bb2ff;

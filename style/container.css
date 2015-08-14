@@ -1,0 +1,260 @@
+/*DuYiqi 2015-7-25 22:34*/
+/*此文件用于设置主页中间的css样式*/
+#container_top #picbox{
+	width: 100%;
+	height: 440px;
+	overflow: hidden;
+	position: relative;
+}
+#picbox img{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#picbox i{
+	display: block;
+/*	background: red;*/
+	width: 40px;
+	height: 40px;
+}
+
+#left{
+	position: absolute;
+	left: 20px;
+	top: 200px;
+	background:url(../image/jiantou.png);
+}
+#right{
+	position: absolute;
+	right: 20px;
+	top: 200px;
+	background:url(../image/jiantou.png) -40px;
+}
+#picbox ul{
+	display: block;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+#picbox ul li{
+	display: block;
+	width: 10px;
+	height: 10px;
+	/*background:red;*/
+	float: left;
+	margin-right: 6px;
+	background:url(../image/jiantou.png) -80px -40px; 
+}
+#picbox ul .on{
+	background:url(../image/jiantou.png) -90px -40px; 
+}
+
+#container{
+	width: 92.1%;
+	margin: 0 auto;
+	margin-top:-180px; 
+	height: 1100px;
+	background: url(../image/fitter.png) repeat-x;
+/*	background-color: red;*/
+	overflow: hidden;
+}
+#notices{
+	display: block;
+	width:340px;
+	height: 520px;
+	background-color: #fff;
+	margin-top: 60px;
+	margin-left: 16px;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, .2);  
+  	-moz-box-shadow:0 0 10px rgba(0, 0, 0, .2);   
+  	box-shadow:0 0 10px rgba(0, 0, 0, .2);  
+  	overflow: hidden;
+  	position: relative;
+}
+.title{
+/*	background:red;*/
+	overflow: hidden;
+	height: 60px;
+	width: 290px;
+	position: relative;
+	margin: 0 auto;
+	border-bottom: 1px solid #a7a7a7;
+	background-color: #fff;
+}
+.title h3{
+	display: block;
+	width: 100px;
+	height: 24px;
+	text-indent: center;
+/*	background: red;*/
+	font-size: 24px;
+	font-weight: lighter;
+	color: #2c2c2c;
+	margin-top: 24px;
+	margin-left:2px;
+}
+.title ul{
+	position: absolute;
+	right: 2px;
+	top:38px;
+	width: 100px;
+}
+.title ul li{
+	width: auto;
+	float: right;
+	display: block;
+	width: 30px;
+	text-align: center;
+/*	background-color: green;*/
+	margin-right: 10px;
+}
+.title a{
+	display: block;
+	width: 30px;
+	font-size: 14px;
+	color: #909090;
+}
+.title a:hover,
+.title ul .on a{
+	color: #0c81ee;
+}
+
+.info{
+	width: 290px;
+	margin: 0 auto;
+	margin-top: 24px;
+	overflow: hidden;
+}
+.info .info_data{
+	font-size: 24px;
+	line-height: 18px;
+	text-align: center;
+	display: block;
+	width: 26px;
+	height:40px;
+	font-weight: normal;
+/*	background-color: blue;*/
+	
+}
+.info .info_data em{
+	font-size: 16px;
+	font-style: normal;
+}
+
+
+.info_content{
+	float: right;
+/*	background: green;*/
+	width: 240px;
+	display: block;
+	margin-top:-30px; 
+}
+.info_content ul{
+	width: 240px;
+	display: block;
+/*	position: absolute;*/
+/*	left: 40px;
+	top:10px;*/
+	font-size: 12px;
+}
+.info_content ul li{
+	margin-bottom:18px; 
+}
+.info_content a{
+	display: block;
+	max-width: 240px;
+	color: #393939;
+	font-size: 12px;
+}
+.info_content a:hover{
+/*	text-decoration: underline;*/
+	color: #393939;
+	font-weight: bolder;
+/*	font-size: 12px;*/
+}
+.info_content .clear{
+	clear: both;
+}
+.more {
+	display: block;
+	width: 100%;
+	height: 50px;
+	background:#fff;
+	position: absolute;
+	bottom: 0px;
+
+	
+}
+.more a{
+	display: block;
+	width: 40px;
+	height: 16px;
+	float: right;
+	color: #0c81ee;
+	font-size: 10px;
+	margin-top:16px;
+	margin-right: 20px;
+}
+#links{
+	display: block;
+	width:340px;
+	height: 230px;
+	background-color: #fff;
+	margin-top: 20px;
+	margin-left: 16px;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, .2);  
+  	-moz-box-shadow:0 0 10px rgba(0, 0, 0, .2);   
+  	box-shadow:0 0 10px rgba(0, 0, 0, .2);  
+  	overflow: hidden;
+  	position: relative;
+}
+#links ul li a p{
+	color: #909090;
+	font-size: 14px;
+	padding-left:25px; 
+}
+#links ul li a span{
+/*	color: red;*/
+	font-size: 6px;
+	font-family: "Microsoft YaHei UI";
+	font-weight: lighter;
+}
+#links ul li{
+/*	margin: 0 auto;*/
+	float: left;
+	line-height: 15px;
+	margin-bottom:12px; 
+	display: block;
+	width: 49%;
+	height: 30px;
+	margin-left: 2px;
+/*	background:red;*/
+	margin-bottom: 20px;
+	position: relative;
+}
+#links ul li i{
+	display: block;
+	width:14px;
+	height:14px;
+	background: url(../image/icon.png) no-repeat;
+	position: absolute;
+	top:8px;
+	left: 2px;
+}
+#links ul{
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+/*	background:green;*/
+	overflow: hidden;
+	margin-top: 20px;
+}
+#links ul li a:hover p{
+	color: #393939;
+}
+#links ul li a:hover  i{
+	background: url(../image/icon_hover.png) no-repeat;
+}

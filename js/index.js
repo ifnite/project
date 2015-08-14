@@ -1,8 +1,11 @@
+$(document).ready(function() {
+	getInfo();//获得轮播图片
+	// getNews();//获得新闻内容
+	// getNotices();//获得公告内容
 	//公告板切换
 	noticeBored();
 	//图片轮播
 	pictureChange();
-
 	// 跑马灯
 	 $(".example").smartmarquee({
 		  // animate duration
@@ -13,7 +16,10 @@
 		  interval : 2000, 
 		  // 'vertical' or 'horizontal'
 		  axis : "vertical"
-		  });
+		  });		
+	
+
+});	
 
 
 /*公告栏点击切换显示*/
@@ -151,4 +157,52 @@ function pictureChange() {
 		}
 	}
 
+}
+/*通过Ajax获取新闻数据*/
+function getInfo(){
+	// alert("0");
+	$.ajax({
+			url: 'php/index.php',
+			type: 'get',
+			dataType: 'json',
+			data: "mainnews&pictures&othernews&topnews",
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert(XMLHttpRequest.status);
+                        alert(XMLHttpRequest.readyState);
+                        alert(textStatus);
+                    },
+            success:function(json){
+            	var infos=eval(json);
+            	var mainnews=infos.mainnews;
+            	var pics=infos.pictures;
+            	var othernews=infos.othernews;
+            	var tops=infos.tops;
+            	$(".newslist").empty();
+            	/*主新闻添加*/
+            	for(var i=0;i<mainnews.length;i++){
+            		var newLi="<li><a href=\"newsPage.php?newsid="+mainnews[i].id+"\">"+mainnews[i].title+"</a></li>";
+            		$("#mainNews>.newslist").append(newLi);
+            	}
+            	/*学院新闻添加*/
+            	for(var i=0;i<othernews.length;i++){
+            		var newLi="<li><a href=\"newsPage.php?newsid="+othernews[i].id+"\"><em>["+othernews[i].depart+"]</em>"+othernews[i].title+"</a></li>";
+            		$("#otherNews>.newslist").append(newLi);
+            	}
+            	/*处理轮播图片*/
+            	for(var i=0;i<pics.length;i++){
+            		var picbox=$("#picbox").children('img');
+            		picbox.eq(i).attr('src', pics[i].url);
+            	}
+            	/*处理置顶新闻*/
+            	$("#mainNews>.newspic").empty();
+            	$("#otherNews>.newspic").empty();
+            	var maintops="<a href=\"newsPage.php?newsid="+tops[0].id+"\"><img src=\""+tops[0].poster+"\"></a><a href=\"newsPage.php?newsid="+tops[0].id+"\"><h1>"+tops[0].title+"</h1></a><a href=\"newsPage.php?newsid="+tops[0].id+"\"><p>"+tops[0].bref+"</p></a>";
+            	var othertops="<a href=\"newsPage.php?newsid="+tops[1].id+"\"><img src=\""+tops[1].poster+"\"></a><a href=\"newsPage.php?newsid="+tops[1].id+"\"><p>["+tops[1].depart+"]"+tops[1].title+"</p></a>";
+            	$("#mainNews>.newspic").append(maintops);
+            	$("#otherNews>.newspic").append(othertops);
+
+            	}
+            
+		})
+	// alert("1");
 }

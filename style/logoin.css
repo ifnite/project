@@ -1,6 +1,14 @@
+*{
+	padding:0px;
+	margin:0px;
+	text-decoration: none;
+	border: none;
+	font-family:  "Microsoft YaHei", "微软雅黑", Arial,sans-serif,"Microsoft YaHei UI";
+}
 body{
 	background: none;
-	width: 100%；
+	width: 100%;
+	height:auto;
 }
 .card{
 	width: 25%;
