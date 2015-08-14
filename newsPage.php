@@ -14,12 +14,20 @@
 	}
 	/*处理数据*/
 	mysqli_query($mysqli,'SET NAMES UTF8');  
+<<<<<<< HEAD
 	$res = mysqli_query($mysqli, "SELECT * FROM mainNews WHERE ID=$newsID");
+=======
+	$res = mysqli_query($mysqli, "SELECT * FROM newslist WHERE ID=$newsID");
+>>>>>>> origin/duyiqi17-patch-1
 	if (!$res) {
    		header("Location: 404.php");//没有找到结果，指向404页面
 	}
 	else{
+<<<<<<< HEAD
 		mysqli_query($mysqli, "UPDATE `mainNews` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$newsID");
+=======
+		mysqli_query($mysqli, "UPDATE `newslist` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$newsID");
+>>>>>>> origin/duyiqi17-patch-1
 	}
 	if(!($row = $res->fetch_assoc())){
 		$res->close();//断开结果连接
@@ -51,7 +59,10 @@
 	<link rel="stylesheet" href="style/footer.css">
 	<link rel="stylesheet" href="style/newsPage.css">
 	<!--[if lt IE 9]><link rel="stylesheet" href="style/ie.css"><![endif]-->
+<<<<<<< HEAD
 	<!--[if lt IE 8]><link rel="stylesheet" href="style/ie7.css"><![endif]-->
+=======
+>>>>>>> origin/duyiqi17-patch-1
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -130,10 +141,17 @@
 							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
 						</li>
 						<li>
+<<<<<<< HEAD
 							<a href="#"><p>如何升级到Win10系统？</p></a>
 						</li>
 						<li>
 							<a href="#"><p>如何升级到Win10系统？</p></a>
+=======
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+						</li>
+						<li>
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+>>>>>>> origin/duyiqi17-patch-1
 						</li>
 						<li>
 							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>

@@ -1,10 +1,16 @@
 
 $(document).ready(function() {
 	pageGet();//获取并生成页码数据
+<<<<<<< HEAD
 	
 	fixPositon(lists,"h1","p");
 	fixPositon(hotNews,"p");
 	fixHeight(hotNews); 
+=======
+	fixPositon(lists,"h1","p");//修复绝对定位引起的位置问题
+	fixPositon(hotNews,"p");//修复绝对定位引起的位置问题
+	fixHeight(hotNews); //修复绝对定位引起的位置问题
+>>>>>>> origin/duyiqi17-patch-1
 });
 
 /*页码点击切换效果*/
@@ -109,9 +115,15 @@ function getData(){
 	var nowPage=$('.on').children('a').text();
 	$.ajax({ //一个Ajax过程 
 	type: "get", //以get方式与后台沟通 
+<<<<<<< HEAD
 	url : "php/list.php", //与此php页面沟通 
 	dataType:'json',//从php返回的值以 JSON方式 解释 
 	data: 'tablename=mainnews&pagenumber='+nowPage, //发给php
+=======
+	url : "php/newsList.php", //与此php页面沟通 
+	dataType:'json',//从php返回的值以 JSON方式 解释 
+	data: 'pagenumber='+nowPage, //发给php
+>>>>>>> origin/duyiqi17-patch-1
 	 error: function(XMLHttpRequest, textStatus, errorThrown) {
                         alert(XMLHttpRequest.status);
                         alert(XMLHttpRequest.readyState);
@@ -151,7 +163,11 @@ function pageGet(){
 		url: 'php/getPage.php',
 		type: 'get',
 		dataType:'json',
+<<<<<<< HEAD
 		data: "tablename=mainnews",
+=======
+		data: "tablename=newsList",
+>>>>>>> origin/duyiqi17-patch-1
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
                         alert(XMLHttpRequest.status);
                         alert(XMLHttpRequest.readyState);
