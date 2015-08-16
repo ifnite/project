@@ -116,6 +116,7 @@
 	color: #454545;
 	font-size: 16px;
 	line-height: 32px;
+/*	background: red;*/
 }
 .otherInfo{
 /*	background: green;*/
@@ -137,7 +138,7 @@
 #newsRecommand{
 	display: block;
 	width: 280px;
-	height: 460px;
+	height: auto;
 	position: absolute;
 	right: 20px;
 	top: 0px;
@@ -173,23 +174,27 @@
 	margin-top: 20px;
 }
 #newsRecommand ul li{
-	position: relative;
 	margin-bottom: 12px;
 	margin-top: 12px;
 /*	background: red;*/
+	overflow: hidden;
+	min-height: 60px;
 }
 #newsRecommand ul li img{
 	display: block;
+	float: left;
 	width: 60px;
 	height: 60px;
 	
 }
 #newsRecommand ul li p{
+	margin-left: 10px;
 	display: block;
-	width: 150px;
-	position: absolute;
-	right: 0px;
-	top:0px;
+	float: left;
+/*	background: red;*/
+	max-width: 150px;
+	height: auto;
+	min-height: 60px;
 }
 
 .bdsharebuttonbox{

@@ -1,0 +1,135 @@
+#container{
+	position: relative;
+}
+#mainNews{
+	display: block;
+	width: 760px;
+	height: 460px;
+/*	background: red;*/
+	position: absolute;
+	top: 60px;
+	right: 40px;
+	overflow: hidden;
+}
+#mainNews .title,
+#otherNews .title{
+	width: 720px;
+}
+#mainNews .title h3,
+#otherNews .title h3{
+/*	background: red;*/
+	height: 34px;
+	margin-left:-2px; 
+	display: block;
+	border-bottom: 3px solid #2f8bef;
+}
+
+#mainNews .newspic{
+	display: block;
+	width: 256px;
+	height: 310px;
+/*	background:red;*/
+	margin-top: 40px;
+	margin-left: 20px;
+	position: relative;
+}
+.newspic a img{
+	width: 256px;
+	height: 166px;
+	overflow: hidden;
+}
+.newspic a h1{
+	color: #2c2c2c;
+	margin: 0 auto;
+	font-size: 18px;
+	font-weight: normal;
+	max-height: 50px;
+	line-height: 20px;
+}
+.newspic a p{
+	text-indent: 2em;
+	margin: 0 auto;
+	margin-top:14px; 
+	font-size: 14px;
+	color: #8c8c8c;
+}
+
+.newspic a p:hover{
+	text-decoration: underline;
+}
+
+
+.newslist a{
+	color: #2c2c2c;
+	font-size: 18px;
+
+}
+.newslist{
+	position: absolute;
+	top:92px;
+	left: 310px;
+}
+.newslist li{
+	width: 430px;
+	height: 18px;
+	margin-bottom: 20px;
+}
+.newslist li a em{
+	font-style: normal;
+	font-size: 12px;
+	color: #979797;
+	font-weight: lighter;
+}
+#otherNews a:hover,
+#mainNews a:hover,
+#mainNews a:hover h1{
+	color: #8c8c8c
+}
+
+#mainNews .more{
+	color: #0c81ee;
+	position: absolute;
+	right: 0px;
+	bottom: 20px;
+}
+#otherNews{
+	display: block;
+	width: 760px;
+	height: 380px;
+/*	background: red;*/
+	position: absolute;
+	top: 500px;
+	right: 40px;
+	overflow: hidden;
+}
+#otherNews .newspic{
+	display: block;
+	width: 256px;
+	height: 220px;
+/*	background:red;*/
+	margin-top: 40px;
+	margin-left: 20px;
+	position: relative;
+}
+#otherNews .newspic a p{
+	text-indent: 0em;
+	margin: 0 auto;
+	margin-top:2px; 
+	font-size: 14px;
+	color: #2c2c2c;
+}
+#otherNews .newslist li{
+	margin-bottom: 15px;
+	max-width: 440px;
+	overflow: hidden;
+	height: 26px;
+}
+#otherNews .more{
+	position: absolute;
+	right: 0px;
+	bottom: 20px;
+}
+#mainNews .more a:hover,
+#otherNews .more a:hover{
+	color: #0c81ee;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在线投稿|电子科技大学党委学生工作部</title>
+	<link rel="stylesheet" href="style/common.css">
+	<link rel="stylesheet" href="style/materialize.min.css">
+	<link rel="stylesheet" href="style/post.css">
+	<script src="js/jquery-1.11.3.min.js"></script>	
+	<script src="js/jquery.form.js"></script>
+</head>
+<body>
+	<div  id="post_header"class="row z-depth-1">
+		<div id="post_header_title" class="col s1 "><p>投稿</p></div>
+		<div id="post_header_logo" class="brand-logo right "><img src="image/post_logo.png"></div>
+    </div>
+	<div class="container">
+       	<div class="col s12 m12">
+       		<div id="post_container_card" class="card">
+       			<div class="card-content">
+       				<p id="card_header" class=" col s12 grey-text text-lighten-1">您正在通过投稿平台向系统提交新闻，请根据提示完成操作</p>			
+       				<div clss="row"><span id="card_title" class="col s12 card-title grey-text  text-darken-4">提交稿件</span></div>
+       			 	<form class="col s12">
+       			 		<div class="row">
+			         		<div class="input-field col s10 offset-s1 ">
+			            	<input id="input_title" type="text" length="30" class="validate">
+			            	<label for="input_title" data-success="">文章题目</label>
+			        		</div>
+			        	</div>
+			        	<div class="row">
+			         		<div class="input-field col s5 offset-s1">
+			            	<input id="input_auther" type="text" length="10" class="validate">
+			            	<label for="input_auther" data-success="">文章作者</label>
+			            	</div>
+			            	<div class="input-field col s5 ">
+			            	<input id="input_pauther" type="text" length="10" class="validate">
+			            	<label for="input_pauther" data-success="">图片作者</label>
+			        		</div>
+			        	</div>
+			        	<div class="row">
+			        		<div class="input-field col s5 offset-s1">
+							    <select id="input_select_from" class="browser-default">
+							      <option value="" disabled selected>请选择新闻来源</option>
+							      <option value="1">Option 1</option>
+							      <option value="2">Option 2</option>
+							      <option value="3">Option 3</option>
+							    </select>
+							</div>
+							<div class="input-field col s5">
+							    <select id="input_select_kind" class="browser-default">
+							      <option value="" disabled selected>请选择文章分类</option>
+							      <option value="1">学工新闻</option>
+							      <option value="2">学院新闻</option>
+							    </select>
+							</div>
+			        	</div>
+			        	<div class="row">
+			        		<div class="col s10 offset-s1">
+			        			   <!-- 加载编辑器的容器 -->
+								    <script id="container" name="content" type="text/plain">
+								    
+								    </script>
+								    <!-- 配置文件 -->
+								    <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+								    <!-- 编辑器源码文件 -->
+								    <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+								    
+			        		</div>
+			        	</div>
+			        	
+			        	<div class="row">
+			         		<div class="input-field col s6 offset-s1 ">
+			            	<input id="input_tag" type="text" length="10" class="validate">
+			            	<label for="input_tag" data-success="">文章标签（最多三个,请使用英文逗号分隔）</label>
+			        		</div>
+			        		<div class="file-field input-field col s4">
+						    </div>
+			        	</div>
+			        	<div class="row">
+
+			        		<div class="col s2 offset-s4">
+			        		<a  id="post_view" class="waves-effect waves-light btn grey center">预览</a>
+			        		</div>
+			        		<div class="col s2">
+			        		<a  id="post_post" class="waves-effect waves-light btn blue center">提交</a>
+			        		</div>
+			        	</div>
+       			 </form>
+       			</div> 
+       		</div>
+       	</div>
+    </div>
+    <script src="js/materialize.min.js"></script>
+    <script>
+	var ue = UE.getEditor('container');
+    </script>
+    <script src="js/post.js"></script>
+
+</body>
+</html>

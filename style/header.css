@@ -104,7 +104,7 @@
 	margin: 0 auto;
 	margin-top:-180px; 
 /*	height: 1100px;*/
-	
+	z-index: 2000;
 /*	background-color: red;*/
 	overflow: hidden;
 }
@@ -119,6 +119,7 @@
   	box-shadow:0 0 15px rgba(0, 0, 0, .5);  
   	position: relative;
   	behavior: url(ie-css3.htc);
+  	z-index: 0;
   	/*background: red;*/
 }
 
