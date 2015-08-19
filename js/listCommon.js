@@ -1,14 +1,5 @@
-
-$(document).ready(function() {
-	pageGet();//获取并生成页码数据
-	
-	fixPositon(lists,"h1","p");
-	fixPositon(hotNews,"p");
-	fixHeight(hotNews); 
-});
-
 /*页码点击切换效果*/
-function changePage(){
+function changePage(tablename){
 	var pages=$('.pages');
 	pages.each(function() {
 		$(this).children('a').click(function(event) {
@@ -28,7 +19,7 @@ function changePage(){
 			$(this).addClass('on');
 			$(window).scrollTop(0);
 			judgePosition(pages);
-			getData();//异步提取数据；
+			getData(tablename);//异步提取数据；
 		});
 
 	});
@@ -58,7 +49,7 @@ function judgePosition (pages) {
 		}
 }
 /*点击前后按钮翻页*/
-function clickChange(){
+function clickChange(tablename){
 	var pre=$(".pre");
 	var next=$(".next");
 	var pages=$('.pages');
@@ -88,7 +79,7 @@ function clickChange(){
 			$(pages).eq(index-2).addClass('on');
 			$(window).scrollTop(0);
 			judgePosition(pages);
-			getData();//异步提取数据；
+			getData(tablename);//异步提取数据；
 		}
 	});
 	next.click(function(event) {
@@ -100,18 +91,18 @@ function clickChange(){
 			$(pages).eq(index).addClass('on');
 			$(window).scrollTop(0);
 			judgePosition(pages);
-			getData();//异步提取数据；
+			getData(tablename);//异步提取数据；
 		}
 	});
 }
 
-function getData(){
+function getData(tablename){
 	var nowPage=$('.on').children('a').text();
 	$.ajax({ //一个Ajax过程 
 	type: "get", //以get方式与后台沟通 
 	url : "php/list.php", //与此php页面沟通 
 	dataType:'json',//从php返回的值以 JSON方式 解释 
-	data: 'tablename=mainnews&pagenumber='+nowPage, //发给php
+	data: 'tablename='+tablename+'&pagenumber='+nowPage, //发给php
 	 error: function(XMLHttpRequest, textStatus, errorThrown) {
                         alert(XMLHttpRequest.status);
                         alert(XMLHttpRequest.readyState);
@@ -123,10 +114,10 @@ function getData(){
 		 $.each(results,function() {
 		 	var tag="标签：";
 		 	if(this.poster){
-		 		var links="<a href=\"newsPage.php?newsid="+this.id+ "\"><img src=\""+this.poster+"\" alt=\""+this.title+"\">"+"<h1>"+this.title+"</h1></a>";
+		 		var links="<a href=\""+tablename+"Page.php?id="+this.id+ "\"><img src=\""+this.poster+"\" alt=\""+this.title+"\">"+"<h1>"+this.title+"</h1></a>";
 		 	}
 		 	else{
-		 		var links="<a href=\"newsPage.php?newsid="+this.id+ "\"><h1>"+this.title+"</h1></a>";
+		 		var links="<a href=\""+tablename+"Page.php?id="+this.id+ "\"><h1>"+this.title+"</h1></a>";
 		 	}
 		 	if(this.tag){
 		 		var tags=(this.tag).split(",");
@@ -146,12 +137,12 @@ function getData(){
 });
 }
 
-function pageGet(){
+function pageGet(tablename){
 	$.ajax({
 		url: 'php/getPage.php',
 		type: 'get',
 		dataType:'json',
-		data: "tablename=mainnews",
+		data: 'tablename='+tablename,
 		error: function(XMLHttpRequest, textStatus, errorThrown) {
                         alert(XMLHttpRequest.status);
                         alert(XMLHttpRequest.readyState);
@@ -172,9 +163,9 @@ function pageGet(){
         	$(".pages").eq(0).addClass('on');
         	var page=$("#pageChange >ul");
 			page.width((pages+2)*40);
-			changePage();//点击页码切换效果
-			clickChange();//点击上一页、下一页按钮切换代码
-			getData();
+			changePage(tablename);//点击页码切换效果
+			clickChange(tablename);//点击上一页、下一页按钮切换代码
+			getData(tablename);
         }
 	});
 	

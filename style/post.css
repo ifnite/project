@@ -44,3 +44,61 @@ body{
 	margin-left: 36px;
 	margin-bottom: 20px;
 }
+.poster_point{
+	display: none;
+	width: 50%;
+}
+#poster_statu{
+	margin-left: -20px;
+	line-height: 80px;
+	color: #676767;
+	font-size: 10px;
+
+}
+#poster_statu img{
+	height: 60px;
+}
+#viewer{
+	height: 600px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 600px;
+	z-index: 200000;
+}
+
+#viewer_content img{
+	width: 90%;
+	display: block;
+	margin:0 auto;
+
+}
+#viewer_content p{
+	font-size: 16px;
+	margin-top: 10px;
+	text-indent: 2em;
+}
+#viewer_card{
+	position: relative;
+}
+#viewer_content{
+	height: 500px;
+	overflow: scroll;
+	width: 560px;
+}
+#viewer{
+	display: none
+}
+#cover{
+	display: none;
+	z-index: 100000;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top:0px;
+	left: 0px;
+	background: rgba(0,0,0,0.5);
+}
+#bref_box em{
+	font-style: normal;
+}

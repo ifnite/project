@@ -1,9 +1,9 @@
 <?php 
 	header("Content-Type: text/html;charset=utf-8"); 
 	/*获取文章ID*/
-	if(isset($_GET["processid"]))
+	if(isset($_GET["id"]))
 		{
-		$processid=$_GET["processid"];}
+		$processid=$_GET["id"];}
 	else{
 		header("Location: 404.php");
 	}
@@ -63,7 +63,7 @@
 					<img src="image/logo.png"></img> 
 					<ul>
 						<li><a href="http://222.197.182.130/xgb2011/">旧版入口</a></li>
-						<li><a href="#">我要投稿</a></li>
+						<li><a href="post.html">我要投稿</a></li>
 						<li><div id="search"><input id="search_box" type="text" value="搜索...">
 						<input id="search_botton" type="submit" value=""></div></li>
 					</ul>
@@ -73,6 +73,7 @@
 						<li><a href="index.html">首&nbsp&nbsp&nbsp&nbsp页</a></li>
 						<li><a href="department.html">机构设置</a></li>
 						<li><a href="newsList.html">学工动态</a></li>
+						<li><a href="otherList.html">学院动态</a></li>
 						<li><a href="rulesList.html">规章制度</a></li>
 						<li class="active"><a href="processList.html">办事流程</a></li>
 						<li><a href="logoIn.html" target="_blank">学工系统登陆</a></li>

@@ -20,7 +20,7 @@
        			<div class="card-content">
        				<p id="card_header" class=" col s12 grey-text text-lighten-1">您正在通过投稿平台向系统提交新闻，请根据提示完成操作</p>			
        				<div clss="row"><span id="card_title" class="col s12 card-title grey-text  text-darken-4">提交稿件</span></div>
-       			 	<form class="col s12">
+       			 	<div class="col s12">
        			 		<div class="row">
 			         		<div class="input-field col s10 offset-s1 ">
 			            	<input id="input_title" type="text" length="30" class="validate">
@@ -34,16 +34,16 @@
 			            	</div>
 			            	<div class="input-field col s5 ">
 			            	<input id="input_pauther" type="text" length="10" class="validate">
-			            	<label for="input_pauther" data-success="">图片作者</label>
+			            	<label for="input_pauther" data-error="">图片作者</label>
 			        		</div>
 			        	</div>
 			        	<div class="row">
 			        		<div class="input-field col s5 offset-s1">
 							    <select id="input_select_from" class="browser-default">
 							      <option value="" disabled selected>请选择新闻来源</option>
-							      <option value="1">Option 1</option>
-							      <option value="2">Option 2</option>
-							      <option value="3">Option 3</option>
+							      <option value="学生工作部">学生工作部</option>
+							      <option value="校团委">校团委</option>
+							      <option value="通信与信息工程学院">通信与信息工程学院</option>
 							    </select>
 							</div>
 							<div class="input-field col s5">
@@ -53,6 +53,12 @@
 							      <option value="2">学院新闻</option>
 							    </select>
 							</div>
+			        	</div>
+			        	<div class="row">
+			        		<div class="input-field col s10 offset-s1">
+				            <textarea id="bref" class="materialize-textarea" length="120"></textarea>
+				            <label  id="bref_box" for="bref">文章摘要<em style="font-style:normal;font-size:50%">(请控制在120字以内)</em></label>
+				          </div>
 			        	</div>
 			        	<div class="row">
 			        		<div class="col s10 offset-s1">
@@ -73,8 +79,36 @@
 			            	<input id="input_tag" type="text" length="10" class="validate">
 			            	<label for="input_tag" data-success="">文章标签（最多三个,请使用英文逗号分隔）</label>
 			        		</div>
-			        		<div class="file-field input-field col s4">
-						    </div>
+
+			        	</div>
+			  			<div class="row" id="poster_row">
+
+			         		<div class="col s5 offset-s1">
+			         		  <form id="poster_form"action="php/handelPoster.php" method="post" enctype="multipart/form-data">
+							  	<div class="file-field input-field">
+							    	<div class="btn blue col s3">
+							        <span>封面</span>
+							        <input id="poster_choose" type="file" name="poster"/>
+							    	</div>
+							      	<input id="poster_path" class="file-path validate col s9" data-success="上传成功" data-error="上传失败" type="text"/>
+							    </div>
+							  </div>
+							    <div class="col s5">
+									<div class="poster_point preloader-wrapper small active" >
+									    <div class="spinner-layer spinner-blue-only">
+									      <div class="circle-clipper left">
+									        <div class="circle"></div>
+									      </div><div class="gap-patch">
+									        <div class="circle"></div>
+									      </div><div class="circle-clipper right">
+									        <div class="circle"></div>
+									      </div>
+									    </div>
+									 </div>
+									<div id="poster_statu"></div>
+							    </div>
+							  </form>
+        					</div>
 			        	</div>
 			        	<div class="row">
 
@@ -85,11 +119,22 @@
 			        		<a  id="post_post" class="waves-effect waves-light btn blue center">提交</a>
 			        		</div>
 			        	</div>
-       			 </form>
+       			 </div>
        			</div> 
        		</div>
        	</div>
+       	<div id="cover">
+       	</div>
+       	<div id="viewer" class="card col s8 offset-s2">
+       		<div id="viewer_card" class="card-content ">
+       				<div ><span id="viewer_title" class="col s12 card-title grey-text  text-darken-4">预览稿件</span></div>
+       				<div class="divider"></div>
+       				<div id= "viewer_content"class="col s10 offset-s1">
+       				</div>
+       		</div>
+       	</div>
     </div>
+
     <script src="js/materialize.min.js"></script>
     <script>
 	var ue = UE.getEditor('container');

@@ -180,12 +180,12 @@ function getInfo(){
             	$(".newslist").empty();
             	/*主新闻添加*/
             	for(var i=0;i<mainnews.length;i++){
-            		var newLi="<li><a href=\"newsPage.php?newsid="+mainnews[i].id+"\">"+mainnews[i].title+"</a></li>";
+            		var newLi="<li><a href=\"mainnewsPage.php?id="+mainnews[i].id+"\">"+mainnews[i].title+"</a></li>";
             		$("#mainNews>.newslist").append(newLi);
             	}
             	/*学院新闻添加*/
             	for(var i=0;i<othernews.length;i++){
-            		var newLi="<li><a href=\"newsPage.php?newsid="+othernews[i].id+"\"><em>["+othernews[i].depart+"]</em>"+othernews[i].title+"</a></li>";
+            		var newLi="<li><a href=\"othernewsPage.php?id="+othernews[i].id+"\"><em>["+othernews[i].depart+"]</em>"+othernews[i].title+"</a></li>";
             		$("#otherNews>.newslist").append(newLi);
             	}
             	/*处理轮播图片*/
@@ -196,8 +196,8 @@ function getInfo(){
             	/*处理置顶新闻*/
             	$("#mainNews>.newspic").empty();
             	$("#otherNews>.newspic").empty();
-            	var maintops="<a href=\"newsPage.php?newsid="+tops[0].id+"\"><img src=\""+tops[0].poster+"\"></a><a href=\"newsPage.php?newsid="+tops[0].id+"\"><h1>"+tops[0].title+"</h1></a><a href=\"newsPage.php?newsid="+tops[0].id+"\"><p>"+tops[0].bref+"</p></a>";
-            	var othertops="<a href=\"newsPage.php?newsid="+tops[1].id+"\"><img src=\""+tops[1].poster+"\"></a><a href=\"newsPage.php?newsid="+tops[1].id+"\"><p>["+tops[1].depart+"]"+tops[1].title+"</p></a>";
+            	var maintops="<a href=\"mainnewsPage.php?id="+tops[0].id+"\"><img src=\""+tops[0].poster+"\"></a><a href=\"newsPage.php?newsid="+tops[0].id+"\"><h1>"+tops[0].title+"</h1></a><a href=\"newsPage.php?newsid="+tops[0].id+"\"><p>"+tops[0].bref+"</p></a>";
+            	var othertops="<a href=\"othernewsPage.php?id="+tops[1].id+"\"><img src=\""+tops[1].poster+"\"></a><a href=\"newsPage.php?newsid="+tops[1].id+"\"><p>["+tops[1].depart+"]"+tops[1].title+"</p></a>";
             	$("#mainNews>.newspic").append(maintops);
             	$("#otherNews>.newspic").append(othertops);
 

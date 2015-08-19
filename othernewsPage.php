@@ -3,7 +3,7 @@
 	/*获取文章ID*/
 	if(isset($_GET["id"]))
 		{
-		$noticeid=$_GET["id"];}
+		$newsID=$_GET["id"];}
 	else{
 		header("Location: 404.php");
 	}
@@ -14,12 +14,12 @@
 	}
 	/*处理数据*/
 	mysqli_query($mysqli,'SET NAMES UTF8');  
-	$res = mysqli_query($mysqli, "SELECT * FROM  notices WHERE ID=$noticeid");
+	$res = mysqli_query($mysqli, "SELECT * FROM otherNews WHERE ID=$newsID");
 	if (!$res) {
    		header("Location: 404.php");//没有找到结果，指向404页面
 	}
 	else{
-		mysqli_query($mysqli, "UPDATE `notices` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$noticeid");
+		mysqli_query($mysqli, "UPDATE `othernews` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$newsID");
 	}
 	if(!($row = $res->fetch_assoc())){
 		$res->close();//断开结果连接
@@ -34,9 +34,9 @@
     	$postTime=strtotime($row['postTime']);//发布时间
     	$pass=$row['pass'];//审核人
     	$viewTimes=$row['viewTimes'];//阅读次数
-    	$res->close();//断开结果连接>
-
-    	?>
+    	$res->close();//断开结果连接
+	
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -63,7 +63,7 @@
 					<img src="image/logo.png"></img> 
 					<ul>
 						<li><a href="http://222.197.182.130/xgb2011/">旧版入口</a></li>
-						<li><a href="post.html">我要投稿</a></li>
+						<li><a href="#">我要投稿</a></li>
 						<li><div id="search"><input id="search_box" type="text" value="搜索...">
 						<input id="search_botton" type="submit" value=""></div></li>
 					</ul>
@@ -73,7 +73,7 @@
 						<li><a href="index.html">首&nbsp&nbsp&nbsp&nbsp页</a></li>
 						<li><a href="department.html">机构设置</a></li>
 						<li><a href="newsList.html">学工动态</a></li>
-						<li><a href="otherList.html">学院动态</a></li>
+						<li  class="active"><a href="otherList.html">学院动态</a></li>
 						<li><a href="rulesList.html">规章制度</a></li>
 						<li><a href="processList.html">办事流程</a></li>
 						<li><a href="logoIn.html" target="_blank">学工系统登陆</a></li>
@@ -83,7 +83,7 @@
 		</header>
 		<div id="container_top">
 			<div id="partTitle">
-				<div><p>通知公告</p></div>
+				<div><p>学院新闻</p></div>
 			</div>
 			<div id="headerFitter"></div>
 		</div>
@@ -108,7 +108,8 @@
 					<?php echo $main ?>
 					</div>
 					<div class="otherInfo">
-						<p id="postInfo"><?php echo "审核：".$pass;}
+						<p id="postInfo"><?php echo "审核：".$pass;
+						}
 						?></p>
 						<div class="bdsharebuttonbox" data-tag="share_1">
 						<a class="bds_qzone" data-cmd="qzone" href="#"></a>
@@ -123,23 +124,30 @@
 					<script src="js/bdshare.js"></script>
 				</div>
 				<div id="newsRecommand">
-					<div class="title"><h3>最新公告</h3></div>
+					<div class="title"><h3>推荐阅读</h3></div>
 					<ul>
-						<?php 
+					<?php 
 
-							$otherNotices = mysqli_query($mysqli, "SELECT id,title,author FROM  notices order by postTime asc limit 5");
-							while ($line=$otherNotices->fetch_assoc()) 
-							{
-								echo "<li><a href=\"noticePage.php?noticeid=".$line["id"]."\"><p>".$line["title"]."</p></a></li>";
+						$othernews = mysqli_query($mysqli, "SELECT id,title,poster FROM othernews order by postTime asc limit 8");
+						while ($line=$othernews->fetch_assoc()) 
+						{
+							if($line["poster"]){
+								echo "<li><a href=\"newsPage.php?newsid=".$line["id"]."\"><img src=\"".$line["poster"]."\"><p>".$line["title"]."</p></a></li>";	
 							}
-							$otherNotices->close();
-							$mysqli->close();
-						 ?>
+							else
+							{
+								echo "<li><a href=\"newsPage.php?newsid=".$line["id"]."\"><p>".$line["title"]."</p></a></li>";	
+							}
+						}
+						$othernews->close();
+						$mysqli->close();
+					?>
 					</ul>
-				</div> 
+				</div>
+			</div>
 		</div>
 	</div>
-	<script src="js/fixFooterPosition.js"></script>
+	
 	
 	<footer>
 		<div id="footer">
@@ -167,5 +175,6 @@
 		</div>
 	</footer>
 	<script src="js/positionBugFix.js"></script>
+	<script src="js/fixFooterPosition.js"></script>
 </body>
 </html>
