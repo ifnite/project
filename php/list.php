@@ -22,9 +22,12 @@
 			$results=array();
 			$i=0;
 			while ($row = $res->fetch_assoc()) {
+<<<<<<< HEAD
 				if($row['bref']==="null"){
 					$row['bref']=="";
 				}
+=======
+>>>>>>> origin/duyiqi17-patch-1
 				$results[$i]=$row;
 				$i++;
 			}

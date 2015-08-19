@@ -75,7 +75,11 @@
 						<li><a href="newsList.html">学工动态</a></li>
 						<li><a href="otherList.html">学院动态</a></li>
 						<li><a href="rulesList.html">规章制度</a></li>
+<<<<<<< HEAD
 						<li><a href="processList.html">办事流程</a></li>
+=======
+						<li><a href="processList">办事流程</a></li>
+>>>>>>> origin/duyiqi17-patch-1
 						<li><a href="logoIn.html" target="_blank">学工系统登陆</a></li>
 					</ul>
 				</div>
@@ -166,6 +170,9 @@
 			</div> 
 		</div>
 	</footer>
+<<<<<<< HEAD
 	<script src="js/positionBugFix.js"></script>
+=======
+>>>>>>> origin/duyiqi17-patch-1
 </body>
 </html>

@@ -14,12 +14,28 @@
 	}
 	/*处理数据*/
 	mysqli_query($mysqli,'SET NAMES UTF8');  
+<<<<<<< HEAD
 	$res = mysqli_query($mysqli, "SELECT * FROM mainNews WHERE ID=$newsID");
+=======
+<<<<<<< HEAD
+	$res = mysqli_query($mysqli, "SELECT * FROM mainNews WHERE ID=$newsID");
+=======
+	$res = mysqli_query($mysqli, "SELECT * FROM newslist WHERE ID=$newsID");
+>>>>>>> origin/duyiqi17-patch-1
+>>>>>>> origin/duyiqi17-patch-1
 	if (!$res) {
    		header("Location: 404.php");//没有找到结果，指向404页面
 	}
 	else{
+<<<<<<< HEAD
 		mysqli_query($mysqli, "UPDATE `mainNews` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$newsID");
+=======
+<<<<<<< HEAD
+		mysqli_query($mysqli, "UPDATE `mainNews` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$newsID");
+=======
+		mysqli_query($mysqli, "UPDATE `newslist` SET`viewTimes`=`viewTimes`+1 WHERE `id`=$newsID");
+>>>>>>> origin/duyiqi17-patch-1
+>>>>>>> origin/duyiqi17-patch-1
 	}
 	if(!($row = $res->fetch_assoc())){
 		$res->close();//断开结果连接
@@ -51,7 +67,14 @@
 	<link rel="stylesheet" href="style/footer.css">
 	<link rel="stylesheet" href="style/newsPage.css">
 	<!--[if lt IE 9]><link rel="stylesheet" href="style/ie.css"><![endif]-->
+<<<<<<< HEAD
 	<!--[if lt IE 8]><link rel="stylesheet" href="style/ie7.css"><![endif]-->
+=======
+<<<<<<< HEAD
+	<!--[if lt IE 8]><link rel="stylesheet" href="style/ie7.css"><![endif]-->
+=======
+>>>>>>> origin/duyiqi17-patch-1
+>>>>>>> origin/duyiqi17-patch-1
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -75,7 +98,11 @@
 						<li  class="active"><a href="newsList.html">学工动态</a></li>
 						<li><a href="otherList.html">学院动态</a></li>
 						<li><a href="rulesList.html">规章制度</a></li>
+<<<<<<< HEAD
 						<li><a href="processList.html">办事流程</a></li>
+=======
+						<li><a href="processList">办事流程</a></li>
+>>>>>>> origin/duyiqi17-patch-1
 						<li><a href="logoIn.html" target="_blank">学工系统登陆</a></li>
 					</ul>
 				</div>
@@ -110,6 +137,10 @@
 					<div class="otherInfo">
 						<p id="postInfo"><?php echo "审核：".$pass;
 						}
+<<<<<<< HEAD
+=======
+						$mysqli->close();//断开数据库连接
+>>>>>>> origin/duyiqi17-patch-1
 						?></p>
 						<div class="bdsharebuttonbox" data-tag="share_1">
 						<a class="bds_qzone" data-cmd="qzone" href="#"></a>
@@ -126,6 +157,7 @@
 				<div id="newsRecommand">
 					<div class="title"><h3>推荐阅读</h3></div>
 					<ul>
+<<<<<<< HEAD
 					<?php 
 
 						$othernews = mysqli_query($mysqli, "SELECT id,title,poster FROM mainnews order by postTime asc limit 8");
@@ -142,12 +174,40 @@
 						$othernews->close();
 						$mysqli->close();
 					?>
+=======
+						<li>
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+						</li>
+						<li>
+<<<<<<< HEAD
+							<a href="#"><p>如何升级到Win10系统？</p></a>
+						</li>
+						<li>
+							<a href="#"><p>如何升级到Win10系统？</p></a>
+=======
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+						</li>
+						<li>
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+>>>>>>> origin/duyiqi17-patch-1
+						</li>
+						<li>
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+						</li>
+						<li>
+							<a href="#"><img src="image/temp.png"><p>如何升级到Win10系统？</p></a>
+						</li>
+>>>>>>> origin/duyiqi17-patch-1
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	
+=======
+	<script src="js/fixFooterPosition.js"></script>
+>>>>>>> origin/duyiqi17-patch-1
 	
 	<footer>
 		<div id="footer">
@@ -174,7 +234,10 @@
 			</div> 
 		</div>
 	</footer>
+<<<<<<< HEAD
 	<script src="js/positionBugFix.js"></script>
 	<script src="js/fixFooterPosition.js"></script>
+=======
+>>>>>>> origin/duyiqi17-patch-1
 </body>
 </html>
